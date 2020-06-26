@@ -41,8 +41,8 @@ class StartupsDetailSpider(scrapy.Spider):
     name = 'detail'
     try:
         with open('Website_crawler/Result_data.csv', 'w') as file:
-            headers = header = ['company_name', 'profile_url', 'company_website', 'location', 'tags', 'founding_date', 'founders',
-                          'employee_range', 'urls', 'emails', 'phones', 'description_short', 'description']
+            headers = header = ['company_name', 'profile_url', 'company_website', 'location', 'tags', 'founding_date',
+                          'urls', 'emails', 'phones', 'description_short', 'description']
             writer = csv.DictWriter(file, fieldnames=header)
             writer.writeheader()
         file = open('Website_crawler/Result_urls.csv', 'r')
@@ -70,8 +70,6 @@ class StartupsDetailSpider(scrapy.Spider):
             founded_mount = items['data']['metas']['found_month'] if 'found_month' in items['data'][
                 'metas'].keys() else ''
             founding_date = str(f'{founded_year}-{founded_mount}' if founded_year and founded_mount != '' else '')
-            founders = str('')
-            employee_range = str('')
             url_linked = str(items['data']['metas']['linkedin']+',' if items['data']['metas']['linkedin'] != '' else '')
             url_twitter = str(items['data']['metas']['twitter']+',' if items['data']['metas']['twitter'] != '' else '')
             url_facebook = str(items['data']['metas']['facebook']+',' if items['data']['metas']['facebook'] != '' else '')
@@ -84,7 +82,7 @@ class StartupsDetailSpider(scrapy.Spider):
                 'metas'].keys() else '')
             with open('Website_crawler/Result_data.csv', 'a') as file:
                 writer = csv.writer(file)
-                data = [company_name, profile_url, company_website, location, tags, founding_date, founders, employee_range,
+                data = [company_name, profile_url, company_website, location, tags, founding_date,
                         url, emails, phones, description_short, description]
                 writer.writerow(data)
 

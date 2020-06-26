@@ -10,7 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77c9d475-1d1a-48c1-bcd0-de0a05ab1870" name="Default Changelist" comment="" />
+    <list default="true" id="77c9d475-1d1a-48c1-bcd0-de0a05ab1870" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Website_crawler/Result_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website_crawler/Result_urls.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website_crawler/spiders/startups_urls_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/Website_crawler/spiders/startups_urls_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi_sheet.xlsx" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
